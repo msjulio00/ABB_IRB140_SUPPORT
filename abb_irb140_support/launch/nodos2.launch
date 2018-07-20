@@ -1,0 +1,10 @@
+<launch>
+<group>
+        <param name="robot_description" 
+	textfile="/var/www/html/abb_irb140_support/urdf/irb140.urdf" />
+</group>
+	<param name="use_gui" value="true" />
+	<node name="robot_state_publiher" pkg="robot_state_publisher" type="state_publisher" />
+	<node name="joint_state_publiher" pkg="joint_state_publisher" type="joint_state_publisher" />	
+	<node name="tf2_web_republiher"   pkg="tf2_web_republisher"   type="tf2_web_republisher" />	
+</launch>
